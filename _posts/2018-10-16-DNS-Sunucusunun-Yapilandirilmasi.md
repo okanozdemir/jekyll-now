@@ -16,22 +16,9 @@ sudo apt-get install bind9
 ```
 Kurulum tamamlandıktan sonra BIND 9'un yapılandırma dosyalarının bulunduğu **/etc/bind** dizinine girelim. Burada bulunan yapılandırma dosyalarından daha detaylı bahsedeceğiz ancak kısaca anlatmak gerekirse:
 
-* **named.conf.options** dosyası BIND 9'un genel ayarlarını yapılandırdığımız dosya. Biz bu dosyada pek değişiklik yapmayacağız.
-
 * **db.** ile başlayan dosyalar yanıt vermekte yetkili olduğumuzu belirttiğimiz alan adlarına ait DNS kayıtlarını sakladığımız dosyalar.
 
 * **named.conf.local** dosyası sorgularına yanıt vermekte yetkili olduğumuzu söylediğimiz alan adlarını belirttiğimiz dosya. Her alan adı için DNS kayıtlarını farklı dosyalara kaydedip burada bu dosyaların yollarını belirtiyoruz. ("db." ile başlayarak isimlendirilmiş dosyalar.)
-
-Öncelikle DNS kayıtlarını bizim tutmadığımız alan adları için gelen sorgulara da cevap verebilmemiz için sorguları yönlendirebileceğimiz DNS sunucularının IP bilgisini **named.conf.options** dosyasına girelim. "forwarders" alanının yorum satırlarını kaldırarak aşağıdaki gibi değiştirebilirsiniz. Ben Google'a ait DNS sunucu adreslerini kullandım.
-
-```
-forwarders {
-        8.8.8.8;
-        8.8.4.4;
-};
-```
-
-> Eğer bulunduğunuz ağda, ağ dışında bulunan DNS sunucularına sorgu yapılmasına izin verilmiyorsa (Örn: ÇOMÜ ağı) bu kısmı o ağa dahilken uygun adreslerle değiştirmelisiniz.
 
 Şimdi DNS sorgularına cevap vermek istediğim alan adının DNS kayıtlarını oluşturalım. Bunun için aşağıdaki komutla "db.local" dosyasının istediğiniz isimde bir kopyasını oluşturabilirsiniz.
 
@@ -56,6 +43,8 @@ zone "okanozdemir.me" {
 ```
 
 ![named.conf.local yapılandırılması]({{ site.baseurl }}/images/named.conf.local.png "named.conf.local yapılandırılması")
+
+> DNS kayıtlarını servisimizin tutmadığı alan adlarına sorgu geldiğinde ise DNS servisimiz fiziksel makinemizde kayıtlı DNS sunucularına sorgu yapıp gelen cevabı döndürecektir.
 
 Aşağıdaki komutla DNS servisimi yeniden başlatıyorum.
 
