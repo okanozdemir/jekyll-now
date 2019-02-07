@@ -38,10 +38,12 @@ Tabiki sistem açılırken ve kapanırken çalıştırılacak olan bu scriptleri
 
 ### Kaynaklar
 
-**GitHub Deposu** : [Before-Shutdown]()
+**GitHub Deposu** : [Before-Shutdown](https://github.com/okanozdemir/before-shutdown)
 
-**Easy Systemd Startup and Shutdown Scripts** : [userscripts4systemd](http://userscripts4systemd.blogspot.com/2016/07/easy-systemd-startup-and-shutdown.html)
+**[1]** : [difference between /usr/lib/systemd/system and /etc/systemd/system](https://unix.stackexchange.com/questions/206315/whats-the-difference-between-usr-lib-systemd-system-and-etc-systemd-system)
 
 **DigitalOcean** : [Understanding Systemd Units and Unit Files](https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files)
+
+**userscripts4systemd Blog** : [Easy Systemd Startup and Shutdown Scripts](http://userscripts4systemd.blogspot.com/2016/07/easy-systemd-startup-and-shutdown.html)
 
 > Geri bildirimleriniz ve sorularınız için okn.ozdemir@gmail.com mail adresimden ulaşabilirsiniz.
