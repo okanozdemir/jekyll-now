@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Computer engineering student at Çanakkale Onsekiz Mart University (COMU).
+Linux System Administrator / DevOps Engineer at [Alegra Digital](https://alegra.io).
 
 ### Contact me
 
