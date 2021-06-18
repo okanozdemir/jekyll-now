@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Linux System Administrator / DevOps Engineer at [Alegra Digital](https://alegra.io).
+DevOps Engineer at [BluTV](https://www.blutv.com/).
 
 ### Contact me
 
